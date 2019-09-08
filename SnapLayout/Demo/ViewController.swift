@@ -31,16 +31,19 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
         cell.backgroundColor = .white
-        
+        cell.layer.cornerRadius = 8
+        cell.layer.shadowPath = UIBezierPath(rect: cell.bounds).cgPath
+        cell.layer.shouldRasterize = true
+        cell.layer.rasterizationScale = UIScreen.main.scale
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: self.view.frame.width - 48, height: self.view.frame.height/2)
+        return .init(width: self.view.frame.width - 40, height: self.view.frame.height/2 + 100)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 100, left: 30, bottom: 0, right: 0)
+        return .init(top: 100, left: 20, bottom: 0, right: 0)
     }
     
     

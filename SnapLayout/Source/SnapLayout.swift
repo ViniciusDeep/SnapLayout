@@ -31,7 +31,7 @@ class SnappingLayout: UICollectionViewFlowLayout {
         let parent = super.targetContentOffset(forProposedContentOffset: proposedContentOffset, withScrollingVelocity: velocity)
         
         // Número do scroll
-        let itemWidth = collectionView.frame.width - 100
+        let itemWidth = collectionView.frame.width - 4
         
         let itemSpace = itemWidth + minimumInteritemSpacing
         var pageNumber = round(collectionView.contentOffset.x / itemSpace)
