@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		79EB67272325A693003188A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB67262325A693003188A7 /* AppDelegate.swift */; };
 		79EB67292325A693003188A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB67282325A693003188A7 /* ViewController.swift */; };
-		79EB672C2325A693003188A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79EB672A2325A693003188A7 /* Main.storyboard */; };
 		79EB672E2325A695003188A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79EB672D2325A695003188A7 /* Assets.xcassets */; };
 		79EB67312325A695003188A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79EB672F2325A695003188A7 /* LaunchScreen.storyboard */; };
 		79EB673C2325A695003188A7 /* SnapLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB673B2325A695003188A7 /* SnapLayoutTests.swift */; };
+		79EB67492325AA29003188A7 /* SnapLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB67482325AA29003188A7 /* SnapLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		79EB67232325A693003188A7 /* SnapLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EB67262325A693003188A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79EB67282325A693003188A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		79EB672B2325A693003188A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79EB672D2325A695003188A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79EB67302325A695003188A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79EB67322325A695003188A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79EB67372325A695003188A7 /* SnapLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EB673B2325A695003188A7 /* SnapLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapLayoutTests.swift; sourceTree = "<group>"; };
 		79EB673D2325A695003188A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79EB67482325AA29003188A7 /* SnapLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +77,8 @@
 		79EB67252325A693003188A7 /* SnapLayout */ = {
 			isa = PBXGroup;
 			children = (
-				79EB67262325A693003188A7 /* AppDelegate.swift */,
-				79EB67282325A693003188A7 /* ViewController.swift */,
-				79EB672A2325A693003188A7 /* Main.storyboard */,
+				79EB67462325A8B1003188A7 /* Demo */,
+				79EB67472325A8B7003188A7 /* Source */,
 				79EB672D2325A695003188A7 /* Assets.xcassets */,
 				79EB672F2325A695003188A7 /* LaunchScreen.storyboard */,
 				79EB67322325A695003188A7 /* Info.plist */,
@@ -94,6 +93,23 @@
 				79EB673D2325A695003188A7 /* Info.plist */,
 			);
 			path = SnapLayoutTests;
+			sourceTree = "<group>";
+		};
+		79EB67462325A8B1003188A7 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				79EB67262325A693003188A7 /* AppDelegate.swift */,
+				79EB67282325A693003188A7 /* ViewController.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		79EB67472325A8B7003188A7 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				79EB67482325AA29003188A7 /* SnapLayout.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +195,6 @@
 			files = (
 				79EB67312325A695003188A7 /* LaunchScreen.storyboard in Resources */,
 				79EB672E2325A695003188A7 /* Assets.xcassets in Resources */,
-				79EB672C2325A693003188A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +214,7 @@
 			files = (
 				79EB67292325A693003188A7 /* ViewController.swift in Sources */,
 				79EB67272325A693003188A7 /* AppDelegate.swift in Sources */,
+				79EB67492325AA29003188A7 /* SnapLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +237,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		79EB672A2325A693003188A7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				79EB672B2325A693003188A7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		79EB672F2325A695003188A7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
