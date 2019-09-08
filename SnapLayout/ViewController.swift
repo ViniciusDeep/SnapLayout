@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapLayoutPackage
 
 class ViewController: SnapLayout {
 
@@ -20,7 +21,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     
     fileprivate func setupCollection() {
         self.collectionView.backgroundColor = #colorLiteral(red: 0.4941176471, green: 0.1411764706, blue: 0.6117647059, alpha: 1)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
+        collectionView.register(MockCell.self, forCellWithReuseIdentifier: "cellId")
     }
     
     
@@ -29,7 +30,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! MockCell
         cell.backgroundColor = .white
         cell.layer.cornerRadius = 8
         cell.layer.shadowPath = UIBezierPath(rect: cell.bounds).cgPath
@@ -43,7 +44,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 100, left: 20, bottom: 0, right: 0)
+        return .init(top: 100, left: 10, bottom: 0, right: 0)
     }
     
     

@@ -8,16 +8,16 @@
 
 import UIKit
 
-class SnapLayout: UICollectionViewController {
+open class SnapLayout: UICollectionViewController {
     
-    init() {
+    public init() {
         let layout = BetterSnappingLayout()
         layout.scrollDirection = .horizontal
         super.init(collectionViewLayout: layout)
         collectionView.decelerationRate = .fast
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
