@@ -21,7 +21,14 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     
     fileprivate func setupCollection() {
         self.collectionView.backgroundColor = #colorLiteral(red: 0.4941176471, green: 0.1411764706, blue: 0.6117647059, alpha: 1)
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.register(MockCell.self, forCellWithReuseIdentifier: "cellId")
+        collectionView.contentInset = .init(top: 0, left: 8, bottom: 0, right: 16)
+    }
+    
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     
@@ -40,13 +47,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: self.view.frame.width - 40, height: self.view.frame.height/2 + 100)
+        return .init(width: self.view.frame.width - 14, height: self.view.frame.height/2 + 100)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 100, left: 10, bottom: 0, right: 0)
-    }
-    
-    
 }
 

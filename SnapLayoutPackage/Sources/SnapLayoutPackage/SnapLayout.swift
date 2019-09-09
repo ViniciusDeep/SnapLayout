@@ -23,18 +23,19 @@ open class SnapLayout: UICollectionViewController {
     
 }
 
-class SnappingLayout: UICollectionViewFlowLayout {
-    // Efeito snap
+fileprivate class SnappingLayout: UICollectionViewFlowLayout {
+   
     
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         guard let collectionView = collectionView else { return super.targetContentOffset(forProposedContentOffset: proposedContentOffset, withScrollingVelocity: velocity) }
         let parent = super.targetContentOffset(forProposedContentOffset: proposedContentOffset, withScrollingVelocity: velocity)
         
-        // Número do scroll
-        let itemWidth = collectionView.frame.width - 4
+       
+        let itemWidth = collectionView.frame.width - 48
         
         let itemSpace = itemWidth + minimumInteritemSpacing
         var pageNumber = round(collectionView.contentOffset.x / itemSpace)
+       
         
         let vX = velocity.x
         if vX > 0 {
@@ -51,7 +52,7 @@ class SnappingLayout: UICollectionViewFlowLayout {
 }
 
 
-class BetterSnappingLayout: UICollectionViewFlowLayout {
+fileprivate class BetterSnappingLayout: UICollectionViewFlowLayout {
     
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         
