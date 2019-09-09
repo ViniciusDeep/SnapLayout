@@ -21,7 +21,7 @@
 
 ## At a Glance
 
-### Before
+### With SnapLayout
 
 ```swift
 class ViewController: SnapLayout {
